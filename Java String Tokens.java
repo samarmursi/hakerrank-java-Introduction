@@ -26,15 +26,24 @@ public class Solution {
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
         // Write your code here.
-        String[] split = s.split("[!,?._'@' ]+");
+        if(s.trim().length() == 0){
+            System.out.println("0");
+            return;
+        }else {
+             String[] split =s.trim().split("[!,?._'@'{}~ ]+");
+        
         int x=  split.length;
       
       System.out.println(x);
         for (String string : split) {
             System.out.println(string);
+        } 
         }
+      
       
         scan.close();
     }
 }
+
+
 
